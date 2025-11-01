@@ -4,6 +4,8 @@
 
 int main(void)
 {
+
+/* original attempt 
   char c;
   int guard;
 
@@ -19,6 +21,17 @@ int main(void)
       guard = 0;
       putchar(c);
     }
+  } */
+
+  char curr, prev;
+
+  prev = '\0';
+
+  while((curr = getchar()) != EOF){
+    if(prev != ' ' || curr != ' '){
+      putchar(curr); 
+    }
+    prev = curr;
   }
 
   return 0;
